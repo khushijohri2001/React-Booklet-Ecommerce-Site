@@ -1,0 +1,217 @@
+.product-listing-container {
+  display: flex;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.filter-nav {
+  margin: 2rem 0;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  height: auto;
+  max-height: 34rem;
+  position: sticky;
+  top: 35%;
+  z-index: 1;
+  font-size: 70%;
+}
+
+.filter-heading {
+  color: var(--tenth-color);
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.clear-btn {
+  background: var(--eigth-color);
+  color: var(--ternary-color);
+  border-radius: 0.4rem !important;
+  text-align: center;
+  font-weight: bolder;
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.clear-btn:hover {
+  transform: scale(1.03);
+}
+
+.filter-option {
+  padding: 0.5rem;
+}
+.filter-option-heading {
+  color: var(--eigth-color);
+  /* font-size: 1.2rem; */
+  font-weight: bold;
+  margin: 1rem 0rem;
+}
+
+/* The container for checkbox text */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+  /* font-size: 15px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: var(--ternary-color);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: var(--ninth-color);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--eigth-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--ternary-color);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* rating */
+
+.range-values {
+  display: flex;
+  gap: 22px;
+}
+
+.rating-slider {
+  width: 100%;
+}
+
+/* price */
+
+/* The radio button container */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+  /* font-size: 15px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: var(--ternary-color);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radiomark {
+  background-color: var(--ninth-color);
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radiomark {
+  background-color: var(--eigth-color);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radiomark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radiomark:after {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ternary-color);
+}
+
+/* Media Queries */
+@media screen and (min-width: 370px) {
+  .product-listing-container {
+    gap: 1.5rem;
+  }
+  .filter-nav {
+    top: 20%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+}
+
+@media screen and (min-width: 992px) {
+  .product-listing-container {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
